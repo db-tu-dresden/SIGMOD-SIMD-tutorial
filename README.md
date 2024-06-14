@@ -76,7 +76,7 @@ The following are some of the valid targets for this Makefile:
 |------------------------|:---------:|---------------|
 | 01 - Foundations       |     27    |```docker run -v $(pwd):/tutorial/code -it sigmod-simd scripts/asm_inspect.sh code/simd-tutorial/01-foundations/include/aggregation/sum_scalar.hpp gcc```|
 | 01 - Foundations       |     28    |```docker run -v $(pwd):/tutorial/code -it sigmod-simd scripts/asm_inspect.sh code/simd-tutorial/01-foundations/include/aggregation/sum_nested_loop.hpp gcc```|
-| 02 - Abstraction       |     39    |```docker run -v $(pwd):/tutorial/code -it sigmod-simd scripts/run.sh abstraction_x86_aggregate_sum```|
+| 02 - Abstraction       |     39    |```docker run -v $(pwd):/tutorial/code -it sigmod-simd scripts/run.sh /tutorial/code abstraction_x86_aggregate_sum```|
 | 03 - Advanced Concepts |     73    |```docker run -v $(pwd):/tutorial/code -it sigmod-simd scripts/run.sh advanced_concepts_x86_nsm_dsm```|
 
 
