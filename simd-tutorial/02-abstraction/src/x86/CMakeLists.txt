@@ -1,0 +1,47 @@
+add_executable(abstraction_x86_aggregate_sum sum.cpp)
+target_compile_features(abstraction_x86_aggregate_sum PRIVATE cxx_std_20)
+set_target_properties(abstraction_x86_aggregate_sum PROPERTIES
+  CXX_STANDARD_REQUIRED ON 
+  RUNTIME_OUTPUT_DIRECTORY ${TURORIAL_BIN_ROOT}/02-abstraction
+  OUTPUT_NAME aggregate_sum
+  INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE
+)
+target_include_directories(abstraction_x86_aggregate_sum PRIVATE ${TUTORIAL_INCLUDE_DIRECTORIES_ABSTRACTION})
+target_compile_options(abstraction_x86_aggregate_sum PRIVATE -march=native -flax-vector-conversions)
+target_compile_definitions(abstraction_x86_aggregate_sum PUBLIC TSL_USE_CONCEPTS)
+
+add_executable(abstraction_x86_filter_sum filter_sum.cpp)
+target_compile_features(abstraction_x86_filter_sum PRIVATE cxx_std_20)
+set_target_properties(abstraction_x86_filter_sum PROPERTIES
+  CXX_STANDARD_REQUIRED ON 
+  RUNTIME_OUTPUT_DIRECTORY ${TURORIAL_BIN_ROOT}/02-abstraction
+  OUTPUT_NAME filter_sum
+  INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE
+)
+target_include_directories(abstraction_x86_filter_sum PRIVATE ${TUTORIAL_INCLUDE_DIRECTORIES_ABSTRACTION})
+target_compile_options(abstraction_x86_filter_sum PRIVATE -march=native -flax-vector-conversions)
+target_compile_definitions(abstraction_x86_filter_sum PUBLIC TSL_USE_CONCEPTS)
+
+add_executable(abstraction_x86_group_sum group_sum.cpp)
+target_compile_features(abstraction_x86_group_sum PRIVATE cxx_std_20)
+set_target_properties(abstraction_x86_group_sum PROPERTIES
+  CXX_STANDARD_REQUIRED ON 
+  RUNTIME_OUTPUT_DIRECTORY ${TURORIAL_BIN_ROOT}/02-abstraction
+  OUTPUT_NAME group_sum
+  INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE
+)
+target_include_directories(abstraction_x86_group_sum PRIVATE ${TUTORIAL_INCLUDE_DIRECTORIES_ABSTRACTION})
+target_compile_options(abstraction_x86_group_sum PRIVATE -march=native -flax-vector-conversions)
+target_compile_definitions(abstraction_x86_group_sum PUBLIC TSL_USE_CONCEPTS)
+
+add_executable(abstraction_x86_nsm_dsm nsm_dsm.cpp)
+target_compile_features(abstraction_x86_nsm_dsm PRIVATE cxx_std_20)
+set_target_properties(abstraction_x86_nsm_dsm PROPERTIES
+  CXX_STANDARD_REQUIRED ON 
+  RUNTIME_OUTPUT_DIRECTORY ${TURORIAL_BIN_ROOT}/02-abstraction
+  OUTPUT_NAME nsm_dsm
+  INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE
+)
+target_include_directories(abstraction_x86_nsm_dsm PRIVATE ${TUTORIAL_INCLUDE_DIRECTORIES_ABSTRACTION})
+target_compile_options(abstraction_x86_nsm_dsm PRIVATE -march=native -flax-vector-conversions -fpermissive)
+target_compile_definitions(abstraction_x86_nsm_dsm PUBLIC TSL_USE_CONCEPTS)
